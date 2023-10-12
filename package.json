@@ -1,0 +1,34 @@
+{
+  "name": "cypressapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "delete-results": "(rmdir /s /q \"cypress/results\" || echo not) && (rmdir /s /q \"mochawesome-report\" || echo not)",
+    "mocha": "npx cypress run --reporter node_modules/mochawesome   --reporter-options reportDir=cypress/results,overwrite=false,html=false,json=true",
+    "mocha_generate": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json",
+    "mocha_merge": "npx marge mochawesome.json",
+    "test": "npm run delete-results && npm run mocha && npm run mocha_generate && npm run mocha_merge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesonBatista/cypressapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesonBatista/cypressapi/issues"
+  },
+  "homepage": "https://github.com/JamesonBatista/cypressapi#readme",
+  "dependencies": {
+    "cypress-plugin-steps": "^1.1.1"
+  },
+  "devDependencies": {
+    "cypress": "^13.2.0",
+    "cypress-mochawesome-reporter": "^3.5.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}

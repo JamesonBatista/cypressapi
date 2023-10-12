@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-12T13:58:14.196Z",
+    "end": "2023-10-12T13:58:18.328Z",
+    "duration": 4132,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e2c6880-1faa-497d-949f-57f0539c79a0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec.cy.js",
+      "file": "cypress\\e2e\\spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9c72a541-f1b1-473b-8dcb-00f790f9046e",
+          "title": "Requisition get our post in api",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Request in api reqres.in",
+              "fullTitle": "Requisition get our post in api Request in api reqres.in",
+              "timedOut": null,
+              "duration": 945,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "req.request({\n  endpoint: req.environment().endpoint_reqres\n}).get({\n  path: \"status\",\n  equal: 200\n}).get({\n  path: \"last_name\",\n  equal: \"Weaver\"\n});",
+              "err": {},
+              "uuid": "9e056566-9524-4f5f-bf04-d2a57d4c99e4",
+              "parentUUID": "9c72a541-f1b1-473b-8dcb-00f790f9046e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Request in api mockable.io",
+              "fullTitle": "Requisition get our post in api Request in api mockable.io",
+              "timedOut": null,
+              "duration": 1453,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "req.request({\n  endpoint: req.environment().endpoint_mockable,\n  alias: \"mockable\"\n}).get({\n  alias: \"mockable\",\n  path: \"status\",\n  equal: 200\n}).get({\n  alias: \"mockable\",\n  path: \"age\",\n  equal: 23\n});",
+              "err": {},
+              "uuid": "9ca15ba1-2dfb-4aa4-894f-5820bca5626a",
+              "parentUUID": "9c72a541-f1b1-473b-8dcb-00f790f9046e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Request in api reqres.in POST",
+              "fullTitle": "Requisition get our post in api Request in api reqres.in POST",
+              "timedOut": null,
+              "duration": 630,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "req.request({\n  method: \"POST\",\n  endpoint: req.environment().endpoint_reqres,\n  payload: \"{}\"\n}).get({\n  path: \"id\"\n}).get({\n  path: \"createdAt\"\n});",
+              "err": {},
+              "uuid": "0935baaf-70f8-401e-967b-712ab3606260",
+              "parentUUID": "9c72a541-f1b1-473b-8dcb-00f790f9046e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Requests in apis",
+              "fullTitle": "Requisition get our post in api Requests in apis",
+              "timedOut": null,
+              "duration": 582,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "req.request({\n  method: \"POST\",\n  endpoint: req.environment().endpoint_reqres,\n  payload: \"{}\"\n}).get({\n  path: \"id\"\n});",
+              "err": {},
+              "uuid": "40d511c1-8ff5-4749-9bd9-c07625f03be9",
+              "parentUUID": "9c72a541-f1b1-473b-8dcb-00f790f9046e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9e056566-9524-4f5f-bf04-d2a57d4c99e4",
+            "9ca15ba1-2dfb-4aa4-894f-5820bca5626a",
+            "0935baaf-70f8-401e-967b-712ab3606260",
+            "40d511c1-8ff5-4749-9bd9-c07625f03be9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3610,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
